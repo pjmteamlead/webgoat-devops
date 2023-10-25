@@ -3,8 +3,8 @@ on: [push, pull_request]
 jobs:
     vulnerabilities-scan:
         runs-on: ubuntu-latest
-    steps:
+        steps:
         - uses: actions/checkout@v2
         - uses: debricked/actions/scan@v1
-    env:
-        DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
+        env:
+            DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
